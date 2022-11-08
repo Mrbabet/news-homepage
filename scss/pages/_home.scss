@@ -2,12 +2,30 @@ body {
   background-color: #f2f2f2;
 }
 main {
+  @media screen and (min-width: 768px) {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
   .wrapper {
     padding: 32px 16px;
   }
   .hero {
+    grid-area: "hero";
     .wrapper {
       padding-top: 8px;
+    }
+    .hero-img {
+      @media screen and (max-width: 768px) {
+        .img-desktop {
+          display: none;
+        }
+      }
+      @media screen and (min-width: 768px) {
+        .img-mobile {
+          display: none;
+        }
+      }
     }
     .hero-text-content {
       margin-block: 24px;
@@ -22,6 +40,7 @@ main {
       .secondary-text {
         p {
           font-size: 16px;
+          color: #5e607a;
         }
         button {
           margin-top: 8px;
@@ -34,6 +53,9 @@ main {
           letter-spacing: 4px;
         }
       }
+      @media screen and (min-width: 768px) {
+        display: flex;
+      }
     }
   }
   .new {
@@ -41,6 +63,10 @@ main {
       padding: 32px 24px;
       margin: 32px 16px;
       background-color: #00001a;
+      @media screen and (min-width: 768px) {
+        margin: 0 auto;
+        max-width: 1100px;
+      }
     }
     article {
       padding-block: 24px;
@@ -68,6 +94,14 @@ main {
     }
   }
   .section-3 {
+    .wrapper {
+      display: flex;
+      flex-direction: column;
+      @media screen and (min-width: 768px) {
+        flex-direction: row;
+        padding-inline: 0;
+      }
+    }
     .article {
       display: flex;
       margin-block: 16px;
