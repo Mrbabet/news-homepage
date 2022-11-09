@@ -2,26 +2,41 @@ body {
   background-color: #f2f2f2;
 }
 main {
-  @media screen and (min-width: 768px) {
-    max-width: 1100px;
-    margin: 0 auto;
+  margin-inline: 16px;
+  @media screen and (min-width: 1000px) {
+    .main-wrapper {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
   }
 
   .wrapper {
     padding: 32px 16px;
   }
   .hero {
-    grid-area: "hero";
     .wrapper {
+      @media screen and (min-width: 1000px) {
+        height: 100%;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
       padding-top: 8px;
     }
     .hero-img {
-      @media screen and (max-width: 768px) {
+      @media screen and (max-width: 1000px) {
         .img-desktop {
           display: none;
         }
       }
-      @media screen and (min-width: 768px) {
+      @media screen and (max-width: 1000px) {
+        .img-mobile {
+          margin: 0 auto;
+        }
+      }
+
+      @media screen and (min-width: 1000px) {
         .img-mobile {
           display: none;
         }
@@ -29,12 +44,23 @@ main {
     }
     .hero-text-content {
       margin-block: 24px;
+      @media screen and (min-width: 1000px) {
+        display: flex;
+        gap: 80px;
+      }
+
       .heading {
         h1 {
           width: 80%;
           font-size: 40px;
           line-height: 40px;
           font-weight: bold;
+          @media screen and (min-width: 1000px) {
+            font-size: 56px;
+            line-height: 56px;
+            min-width: 300px;
+            height: 100%;
+          }
         }
       }
       .secondary-text {
@@ -53,19 +79,19 @@ main {
           letter-spacing: 4px;
         }
       }
-      @media screen and (min-width: 768px) {
+      @media screen and (min-width: 1000px) {
         display: flex;
       }
     }
   }
   .new {
     .wrapper {
+      height: 100%;
       padding: 32px 24px;
       margin: 32px 16px;
       background-color: #00001a;
-      @media screen and (min-width: 768px) {
-        margin: 0 auto;
-        max-width: 1100px;
+      @media screen and (min-width: 1000px) {
+        margin: 0;
       }
     }
     article {
@@ -97,9 +123,9 @@ main {
     .wrapper {
       display: flex;
       flex-direction: column;
-      @media screen and (min-width: 768px) {
+      @media screen and (min-width: 1000px) {
         flex-direction: row;
-        padding-inline: 0;
+        padding: 0;
       }
     }
     .article {

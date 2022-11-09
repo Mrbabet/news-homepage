@@ -1,9 +1,12 @@
 main {
-  @media screen and (min-width: 768px) {
-    place-content: center;
-    display: grid;
-    grid-template-columns: 3fr 1fr;
-    grid-template-rows: 1fr;
+  .main-wrapper {
+    @media screen and (min-width: 1000px) {
+      place-content: center;
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      grid-template-rows: 1fr;
+      gap: 30px;
+    }
 
     .section-3 {
       grid-column: span 2;
